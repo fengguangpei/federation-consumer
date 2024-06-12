@@ -2,7 +2,7 @@ import { defineConfig } from '@rsbuild/core';
 import { pluginVue } from '@rsbuild/plugin-vue';
 import { ModuleFederationPlugin } from '@module-federation/enhanced/rspack';
 const mode = process.env.NODE_ENV;
-console.log(mode)
+console.log(mode);
 export default defineConfig({
   server: {
     port: 2000,
@@ -16,7 +16,7 @@ export default defineConfig({
           remotes: {
             federation_provider:
               mode === 'production'
-                ? 'federation_provider@https://www.fenggp.com.cn/micro/mf-manifest.json'
+                ? 'federation_provider@https://www.fenggp.top/mf-manifest.json'
                 : 'federation_provider@http://localhost:3000/mf-manifest.json',
           },
           shared: ['vue'],
